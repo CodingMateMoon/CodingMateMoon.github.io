@@ -4,10 +4,13 @@ title   : wiki
 toc     : true
 public  : true
 comment : false
-updated : 2022-12-07 23:01:03 +0900
+updated : 2023-03-01 21:32:51 +0900
 regenerate: true
 ---
 
+## [[vim]]
+* [[vim/vimrc]]
+---
 ## [[how-to]]
 
 * [[mathjax-latex]]
