@@ -1,9 +1,9 @@
 ---
-layout  : vim
+layout  : category
 title   : vim-정리
 summary : 
 date    : 2023-03-01 21:19:20 +0900
-updated : 2023-03-01 21:37:14 +0900
+updated : 2023-04-23 00:06:04 +0900
 tag     : 
 toc     : true
 public  : true

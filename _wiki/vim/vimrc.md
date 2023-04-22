@@ -3,11 +3,11 @@ layout  : wiki
 title   : 
 summary : 
 date    : 2023-03-01 21:21:30 +0900
-updated : 2023-03-01 21:23:01 +0900
+updated : 2023-04-23 00:12:26 +0900
 tag     : 
 toc     : true
 public  : true
-parent  : [[vim]] 
+parent  : [[/vim]] 
 latex   : false
 resource: C07297CD-A74B-47F1-857C-41F270BBEFBB
 ---

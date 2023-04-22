@@ -4,21 +4,19 @@ title   : wiki
 toc     : true
 public  : true
 comment : false
-updated : 2023-04-22 23:20:14 +0900
+updated : 2023-04-23 00:02:32 +0900
 regenerate: true
 ---
 
 ## [[vim]]
 * [[vim/vimrc]]
-* [[fzf]]
-* [[test]] 
 ---
 ## [[how-to]]
 
 * [[mathjax-latex]]
 
 ## [[git]]
-
+* [[git/git_checkout]]
 
 ---
 

@@ -1,0 +1,12 @@
+{
+ "type": "wiki",
+ "title": "vim-정리",
+ "summary": "",
+ "parent": "index",
+ "url": "/wiki/vim",
+ "updated": "2023-04-23 00:06:04 +0900",
+ "resource": "F28556E9-B374-4F16-80CA-64DACA6D1320",
+ "children": [
+  "vim/vimrc"
+ ]
+}
