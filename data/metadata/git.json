@@ -1,9 +1,11 @@
 {
  "type": "wiki",
  "title": "git",
- "summary": "",
+ "summary": "git head",
  "parent": "index",
  "url": "/wiki/git",
- "updated": "2023-04-23 00:08:02 +0900",
- "children": []
+ "updated": "2023-04-23 00:43:55 +0900",
+ "children": [
+  "git/git_test"
+ ]
 }

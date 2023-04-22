@@ -215,8 +215,10 @@ function saveToFile(fileLocation, dataString, isPrintWhenSuccess) {
 }
 
 function parseInfo(file, info) {
+    console.log(`file path: ${file.path}`);
     console.log(`info : ${info}`);
-    if (info === null || info === undefined) {
+    if (info === null)
+    {
         return undefined;
     }
 
@@ -227,22 +229,22 @@ function parseInfo(file, info) {
         modified: fs.statSync(file.path).mtime
     };
 
-    const rawData = info.split('\n');
+	  const rawData = info.split('\n');
+	
+	  rawData.forEach(str => {
+	      const result = /^\s*([^:]+):\s*(.+)\s*$/.exec(str);
 
-    rawData.forEach(str => {
-        const result = /^\s*([^:]+):\s*(.+)\s*$/.exec(str);
-
-        if (result == null) {
-            return;
-        }
-
-        const key = result[1].trim();
-        const val = result[2].trim()
-            .replace(/\[{2}\/?|\]{2}/g, '')    // 문서 이름 앞뒤의 [[  ]], [[/ ]] 를 제거한다.
-        ;
-
-        obj[key] = val;
-    });
+       if (result == null) {
+           return;
+       }
+	
+       const key = result[1].trim();
+       const val = result[2].trim()
+           .replace(/\[{2}\/?|\]{2}/g, '')    // 문서 이름 앞뒤의 [[  ]], [[/ ]] 를 제거한다.
+       ;
+	
+       obj[key] = val;
+   });
 
     if (file.type === 'blog') {
         obj.url = '/blog/' + obj.date.replace(/^(\d{4})-(\d{2})-(\d{2}).*$/, '$1/$2/$3/');

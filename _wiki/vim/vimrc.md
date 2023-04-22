@@ -1,10 +1,10 @@
 ---
 layout  : wiki
-title   : 
-summary : 
+title   : vimrc
+summary : vimrc
 date    : 2023-03-01 21:21:30 +0900
-updated : 2023-04-23 00:12:26 +0900
-tag     : 
+updated : 2023-04-23 00:45:07 +0900
+tag     : vimrc
 toc     : true
 public  : true
 parent  : [[/vim]] 

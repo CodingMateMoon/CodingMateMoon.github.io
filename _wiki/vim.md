@@ -1,10 +1,10 @@
 ---
 layout  : category
 title   : vim-정리
-summary : 
+summary : vim head
 date    : 2023-03-01 21:19:20 +0900
-updated : 2023-04-23 00:06:04 +0900
-tag     : 
+updated : 2023-04-23 00:44:09 +0900
+tag     : vim
 toc     : true
 public  : true
 parent  : [[index]]
