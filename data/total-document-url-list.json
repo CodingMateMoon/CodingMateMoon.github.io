@@ -20,7 +20,7 @@
  "/blog/2017/05/29/jwp-15",
  "/blog/2017/06/01/jwp-16",
  "/wiki/git",
- "/wiki/git/git_checkout",
+ "/wiki/git/git_checkout_version",
  "/wiki/git/git_test",
  "/wiki/how-to",
  "/wiki/index",
@@ -30,5 +30,5 @@
  "/wiki/temp/temp1",
  "/wiki/temp/temp2",
  "/wiki/vim",
- "/wiki/vim/vimrc"
+ "/wiki/vim/vimrc_set"
 ]
