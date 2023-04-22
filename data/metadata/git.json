@@ -6,6 +6,7 @@
  "url": "/wiki/git",
  "updated": "2023-04-23 00:43:55 +0900",
  "children": [
+  "git/git_check_v",
   "git/git_test"
  ]
 }

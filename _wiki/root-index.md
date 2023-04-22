@@ -4,7 +4,7 @@ title   : wiki
 toc     : true
 public  : true
 comment : false
-updated : 2023-04-23 02:33:17 +0900
+updated : 2023-04-23 02:41:15 +0900
 regenerate: true
 ---
 
@@ -16,7 +16,7 @@ regenerate: true
 * [[mathjax-latex]]
 
 ## [[/git]]
-* [[/git/git_checkout_version]]
+* [[/git/git_check_v]]
 * [[/git/git_test]]
 
 ## [[temp]]
