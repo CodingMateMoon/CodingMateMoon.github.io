@@ -12,6 +12,7 @@ for CHANGED_FILE in $CHANGE_LIST; do
     echo "이미지경로를 교정할 문서 파일: [$CHANGED_FILE]"
 
     RESOURCE_DIR=`head $CHANGED_FILE | egrep -o '[A-F0-9-]{2}/[A-F0-9-]{34}$'`
+    echo "RESOURCE_DIR : $RESOURCE_DIR"
     TARGET_PATH="./resource/$RESOURCE_DIR"
 
     echo "생성할 디렉토리 경로: [$TARGET_PATH]"
@@ -21,7 +22,9 @@ for CHANGED_FILE in $CHANGE_LIST; do
     # URI_LIST=`ag "https://user-images\.githubuser.*?\/$NUM\/.*?(png|jpg|gif|mp4)" -o $CHANGED_FILE`
     # URI_LIST=`ag "https://pbs.twimg.com/media/.*?(png|jpg|gif|mp4)" -o $CHANGED_FILE`
 
-    URI_LIST=`ag "https://((user-images\.githubuser.*?\/$NUM\/)|(pbs.twimg.com/media/)|(video.twimg.com/.+_video/)).*?(png|jpg|gif|mp4)" -o $CHANGED_FILE`
+    #URI_LIST=`ag "https://((user-images\.githubuser.*?\/[0-9]+\/)|(pbs.twimg.com/media/)|(video.twimg.com/.+_video/)).*?(png|jpg|gif|mp4)" -o $CHANGED_FILE`
+    URI_LIST=`ag "https://((user-images\.githubuser.*?\/[0-9]+\/)|(pbs.twimg.com/media/)|(video.twimg.com/.+_video/)).*?(png|jpg|gif|mp4)" -o $CHANGED_FILE`
+    echo "URI_LIST : $URI_LIST"
 
     for URI in $URI_LIST; do
         FILE_NAME=`echo $URI | sed 's,^.*/,,'`
