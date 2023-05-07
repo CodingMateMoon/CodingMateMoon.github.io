@@ -2,7 +2,7 @@
 
 # github에 올린 user-images를 자동으로 다운로드합니다.
 
-NUM=1855714
+NUM=23370202
 
 CHANGE_LIST=`git diff --exit-code --cached --name-only --diff-filter=ACM -- '*.md'`
 
@@ -23,7 +23,7 @@ for CHANGED_FILE in $CHANGE_LIST; do
     # URI_LIST=`ag "https://pbs.twimg.com/media/.*?(png|jpg|gif|mp4)" -o $CHANGED_FILE`
 
     #URI_LIST=`ag "https://((user-images\.githubuser.*?\/[0-9]+\/)|(pbs.twimg.com/media/)|(video.twimg.com/.+_video/)).*?(png|jpg|gif|mp4)" -o $CHANGED_FILE`
-    URI_LIST=`ag "https://((user-images\.githubuser.*?\/[0-9]+\/)|(pbs.twimg.com/media/)|(video.twimg.com/.+_video/)).*?(png|jpg|gif|mp4)" -o $CHANGED_FILE`
+    URI_LIST=`ag "https://((user-images\.githubuser.*?\/$NUM\/)|(pbs.twimg.com/media/)|(video.twimg.com/.+_video/)).*?(png|jpg|gif|mp4)" -o $CHANGED_FILE`
     echo "URI_LIST : $URI_LIST"
 
     for URI in $URI_LIST; do
