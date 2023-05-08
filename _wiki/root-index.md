@@ -4,7 +4,7 @@ title   : wiki
 toc     : true
 public  : true
 comment : false
-updated : 2023-05-07 21:46:21 +0900
+updated : 2023-05-09 06:06:44 +0900
 regenerate: true
 ---
 
@@ -20,10 +20,8 @@ regenerate: true
 * [[/git/git_check_v]]
 * [[/git/git_test]]
 
-## [[temp]]
-* [[temp/temp1]]
-* [[temp/temp2]]
-* [[temp/temp3]]
+## [[oracle]]
+* [[oracle/oracle_connection]]
 
 ---
 

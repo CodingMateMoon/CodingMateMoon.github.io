@@ -1,0 +1,10 @@
+{
+ "type": "wiki",
+ "title": "oracle",
+ "parent": "index",
+ "url": "/wiki/oracle",
+ "updated": "2023-05-09 05:08:19 +0900",
+ "children": [
+  "oracle/oracle_connection"
+ ]
+}

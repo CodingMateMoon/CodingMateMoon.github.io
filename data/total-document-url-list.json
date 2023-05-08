@@ -26,10 +26,13 @@
  "/wiki/how-to",
  "/wiki/index",
  "/wiki/mathjax-latex",
+ "/wiki/oracle",
+ "/wiki/oracle/oracle_connection",
  "/wiki/root-index",
  "/wiki/temp",
  "/wiki/temp/temp1",
  "/wiki/temp/temp2",
+ "/wiki/temp/temp3",
  "/wiki/vim",
  "/wiki/vim/markdown_code_block",
  "/wiki/vim/vimrc_set"
