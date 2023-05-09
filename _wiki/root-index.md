@@ -4,7 +4,7 @@ title   : wiki
 toc     : true
 public  : true
 comment : false
-updated : 2023-05-09 06:06:44 +0900
+updated : 2023-05-10 00:59:25 +0900
 regenerate: true
 ---
 
@@ -16,12 +16,17 @@ regenerate: true
 
 * [[mathjax-latex]]
 
+## [[linux]]
+* [[linux/install_ruby_2.7]]
+
 ## [[/git]]
 * [[/git/git_check_v]]
 * [[/git/git_test]]
 
 ## [[oracle]]
 * [[oracle/oracle_connection]]
+
+
 
 ---
 
