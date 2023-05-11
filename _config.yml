@@ -39,9 +39,9 @@ collections:
 # Comment Service
 giscus:
   repo: CodingMateMoon/CodingMateMoon.github.io
-  repo_id: SAMPLE-VALUE
+  repo_id: R_kgDOIzEgDA
   category: Announcements
-  category_id: SAMPLE-VALUE
+  category_id: DIC_kwDOIzEgDM4CWWpK
 
 google_analytics:
   ua: SAMPLE-VALUE
