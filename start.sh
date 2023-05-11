@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -euo pipefail; IFS=$'\n\t'
+set -euo pipefail;IFS=$'\n\t'
 
 if [[ $1 = "docker" ]]; then
     ./generateData.js

@@ -4,7 +4,7 @@ title   : wiki
 toc     : true
 public  : true
 comment : false
-updated : 2023-05-11 08:34:15 +0900
+updated : 2023-05-11 23:00:28 +0900
 regenerate: true
 ---
 
@@ -28,6 +28,9 @@ regenerate: true
 
 ## [[os]]
 * [[os/raw_device]]
+
+## [[refactoring]]
+* [[refactoring/Encapsulation]]
 
 ---
 

@@ -1,0 +1,10 @@
+{
+ "type": "wiki",
+ "title": "refactoring",
+ "parent": "index",
+ "url": "/wiki/refactoring",
+ "updated": "2023-05-11 22:59:17 +0900",
+ "children": [
+  "refactoring/Encapsulation"
+ ]
+}
