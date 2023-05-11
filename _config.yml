@@ -50,8 +50,8 @@ google_analytics:
 google_adsense:
   client: SAMPLE-VALUE
 
-blame: "https://github.com/CodingMateMoon/CodingMateMoon.github.io/blame/master/_wiki"
-edit: "https://github.com/CodingMateMoon/CodingMateMoon.github.io/edit/master/_wiki"
+blame: "https://github.com/CodingMateMoon/CodingMateMoon.github.io/blame/main/_wiki"
+edit: "https://github.com/CodingMateMoon/CodingMateMoon.github.io/edit/main/_wiki"
 issue: "https://github.com/CodingMateMoon/CodingMateMoon.github.io/issues/new"
 
 timezone: "Asia/Seoul"
