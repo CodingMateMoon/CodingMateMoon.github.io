@@ -4,7 +4,7 @@ title   : wiki
 toc     : true
 public  : true
 comment : false
-updated : 2023-05-13 10:01:33 +0900
+updated : 2023-05-16 06:13:09 +0900
 regenerate: true
 ---
 
@@ -26,8 +26,12 @@ regenerate: true
 ## [[oracle]]
 * [[oracle/oracle_connection]]
 
+## [[computer-architecture]]
+* [[computer-architecture/FAT]]
+
 ## [[os]]
 * [[os/raw_device]]
+* [[os/FAT]]
 
 ## [[refactoring]]
 * [[refactoring/basic]]

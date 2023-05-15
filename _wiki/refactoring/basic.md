@@ -3,7 +3,7 @@ layout  : wiki
 title   : 기본 기술
 summary : 
 date    : 2023-05-13 10:01:33 +0900
-updated : 2023-05-13 10:15:44 +0900
+updated : 2023-05-13 10:20:14 +0900
 tag     : 
 toc     : true
 public  : true
