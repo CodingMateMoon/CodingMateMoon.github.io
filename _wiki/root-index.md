@@ -4,7 +4,7 @@ title   : wiki
 toc     : true
 public  : true
 comment : false
-updated : 2023-05-16 06:13:09 +0900
+updated : 2023-05-17 12:17:59 +0900
 regenerate: true
 ---
 
@@ -36,6 +36,7 @@ regenerate: true
 ## [[refactoring]]
 * [[refactoring/basic]]
 * [[refactoring/Encapsulation]]
+* [[refactoring/move_function]]
 
 ---
 
