@@ -4,17 +4,13 @@ title   : wiki
 toc     : true
 public  : true
 comment : false
-updated : 2023-05-17 12:17:59 +0900
+updated : 2023-05-17 21:28:58 +0900
 regenerate: true
 ---
 
 ## [[vim]]
 * [[vim/vimrc_set]]
 * [[vim/markdown_code_block]]
-
-## [[how-to]]
-
-* [[mathjax-latex]]
 
 ## [[linux]]
 * [[linux/install_ruby_2.7]]
@@ -31,27 +27,12 @@ regenerate: true
 
 ## [[os]]
 * [[os/raw_device]]
-* [[os/FAT]]
 
 ## [[refactoring]]
 * [[refactoring/basic]]
 * [[refactoring/Encapsulation]]
 * [[refactoring/move_function]]
+* [[refactoring/data_organization]]
 
 ---
-
-## blog posts
-<div>
-    <ul>
-{% for post in site.posts %}
-    {% if post.public == true %}
-        <li>
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-                {{ post.title }}
-            </a>
-        </li>
-    {% endif %}
-{% endfor %}
-    </ul>
-</div>
 

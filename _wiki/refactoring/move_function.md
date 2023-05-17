@@ -3,7 +3,7 @@ layout  : wiki
 title   : 기능 옮기기(함수,필드,문장 등을 적절한 위치로 옮기는 기술)
 summary : 
 date    : 2023-05-17 12:17:59 +0900
-updated : 2023-05-17 12:20:01 +0900
+updated : 2023-05-17 20:19:18 +0900
 tag     : 
 toc     : true
 public  : true
@@ -40,3 +40,6 @@ C#-LINQ 쿼리 작성하듯이 where select. collection에 sql 적용하듯이 �
 
 # 죽은 코드 제거하기 (Remove Dead Code)
  
+ 
+# 참고자료
+* 코딩으로 학습하는 리팩토링(인프런 강의) : <https://www.inflearn.com/course/%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81/dashboard>

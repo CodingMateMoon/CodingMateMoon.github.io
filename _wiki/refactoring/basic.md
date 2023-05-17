@@ -1,9 +1,9 @@
 ---
 layout  : wiki
-title   : 기본 기술
-summary : 
+title   : Refactoring 기본 기술
+summary : refactoring
 date    : 2023-05-13 10:01:33 +0900
-updated : 2023-05-13 10:20:14 +0900
+updated : 2023-05-17 21:36:04 +0900
 tag     : 
 toc     : true
 public  : true
@@ -30,3 +30,6 @@ resource: 333348d4-285e-45d4-9db6-77ac4e177e97
 # 여러 함수를 클래스로 묶기 (Combine Functions into Class)
 # 여러 함수를 변환 함수로 묶기 (Combine Functions into Trasnform)
 # 단계 쪼개기 (Split Phase)
+ 
+# 참고자료
+* 코딩으로 학습하는 리팩토링(인프런 강의) : <https://www.inflearn.com/course/%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81/dashboard>

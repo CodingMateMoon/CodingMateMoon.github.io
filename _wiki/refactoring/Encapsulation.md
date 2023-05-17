@@ -1,10 +1,10 @@
 ---
 layout  : wiki
-title   : 캡슐화(Encapsulation)
+title   : Refactoring 캡슐화(Encapsulation)
 summary : 
 date    : 2023-05-11 23:00:28 +0900
-updated : 2023-05-11 23:43:48 +0900
-tag     : 
+updated : 2023-05-17 21:38:07 +0900
+tag     : refactoring
 toc     : true
 public  : true
 parent  : refactoring

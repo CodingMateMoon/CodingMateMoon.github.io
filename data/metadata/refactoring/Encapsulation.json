@@ -1,10 +1,10 @@
 {
  "type": "wiki",
- "title": "캡슐화(Encapsulation)",
+ "title": "Refactoring 캡슐화(Encapsulation)",
  "summary": "",
  "parent": "refactoring",
  "url": "/wiki/refactoring/Encapsulation",
- "updated": "2023-05-11 23:43:48 +0900",
+ "updated": "2023-05-17 21:38:07 +0900",
  "resource": "c025f167-ec61-4a8a-be45-dcffef9d19e7",
  "children": []
 }
