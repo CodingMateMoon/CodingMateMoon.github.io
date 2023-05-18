@@ -1,5 +1,6 @@
 [
  "refactoring",
  "refactoring/data_organization",
- "refactoring/Encapsulation"
+ "refactoring/Encapsulation",
+ "refactoring/simplify_conditional_logic"
 ]

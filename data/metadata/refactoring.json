@@ -6,6 +6,7 @@
  "updated": "2023-05-11 22:59:17 +0900",
  "children": [
   "refactoring/data_organization",
-  "refactoring/Encapsulation"
+  "refactoring/Encapsulation",
+  "refactoring/simplify_conditional_logic"
  ]
 }

@@ -3,7 +3,7 @@ layout  : wiki
 title   : markdown 코드 블록(code block)
 summary : 
 date    : 2023-04-23 15:09:29 +0900
-updated : 2023-04-23 18:39:33 +0900
+updated : 2023-05-18 08:57:41 +0900
 tag     : 
 toc     : true
 public  : true
@@ -47,6 +47,11 @@ $ sudo pip3 install --upgrade neovim
 ```console
 foo@bar:~$ whoami
 foo
+```
+* java
+```java
+public class Order {
+  private Long id;
 ```
 # 참고자료
 * how to highlight bash/shell commands in markdown?: <https://stackoverflow.com/questions/20303826/how-to-highlight-bash-shell-commands-in-markdown>
