@@ -3,7 +3,7 @@
  "title": "refactoring",
  "parent": "index",
  "url": "/wiki/refactoring",
- "updated": "2023-05-20 09:24:44 +0900",
+ "updated": "2023-05-20 09:32:02 +0900",
  "children": [
   "refactoring/basic",
   "refactoring/data_organization",

@@ -5,8 +5,8 @@ filename="${1}.md"
 today=$(date +"%Y-%m-%d %H:%M:%S %z")
 # set content
 content="---
-layout:category
-title: Enter a title.
+layout : category
+title : Enter a title.
 summary :
 date : ${today}
 updated : ${today}
