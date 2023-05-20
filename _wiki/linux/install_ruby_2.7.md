@@ -3,11 +3,11 @@ layout  : wiki
 title   : wsl2에서 ruby 2.7 설치
 summary : 
 date    : 2023-05-10 00:59:26 +0900
-updated : 2023-05-10 01:07:38 +0900
+updated : 2023-05-20 09:18:48 +0900
 tag     : 
 toc     : true
 public  : true
-parent  : 
+parent  : linux
 latex   : false
 resource: dd90e174-255a-472c-b130-cff6522dc18c
 ---

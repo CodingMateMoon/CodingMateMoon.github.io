@@ -3,11 +3,11 @@ layout  : wiki
 title   : Refactoring 기본 기술
 summary : refactoring
 date    : 2023-05-13 10:01:33 +0900
-updated : 2023-05-17 21:36:04 +0900
+updated : 2023-05-20 09:25:01 +0900
 tag     : 
 toc     : true
 public  : true
-parent  : 
+parent  : refactoring
 latex   : false
 resource: 333348d4-285e-45d4-9db6-77ac4e177e97
 ---

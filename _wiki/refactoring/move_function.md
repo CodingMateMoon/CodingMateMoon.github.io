@@ -3,11 +3,11 @@ layout  : wiki
 title   : 기능 옮기기(함수,필드,문장 등을 적절한 위치로 옮기는 기술)
 summary : 
 date    : 2023-05-17 12:17:59 +0900
-updated : 2023-05-17 20:19:18 +0900
+updated : 2023-05-20 09:25:16 +0900
 tag     : 
 toc     : true
 public  : true
-parent  : 
+parent  : refactoring
 latex   : false
 resource: c43c181b-af06-4cf4-8f7e-1a4e27f7ef89
 ---

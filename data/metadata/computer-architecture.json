@@ -4,5 +4,7 @@
  "parent": "index",
  "url": "/wiki/computer-architecture",
  "updated": "2023-05-16 06:12:40 +0900",
- "children": []
+ "children": [
+  "computer-architecture/FAT"
+ ]
 }

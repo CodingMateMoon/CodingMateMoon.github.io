@@ -3,11 +3,11 @@ layout  : wiki
 title   : Raw Device 개념
 summary : 
 date    : 2023-05-11 08:34:15 +0900
-updated : 2023-05-11 08:46:18 +0900
+updated : 2023-05-20 09:17:17 +0900
 tag     : 
 toc     : true
 public  : true
-parent  : 
+parent  : os
 latex   : false
 resource: 93759dca-45cf-47d4-8d22-760e31046dd8
 ---

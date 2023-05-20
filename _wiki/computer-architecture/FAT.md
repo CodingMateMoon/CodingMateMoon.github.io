@@ -3,11 +3,11 @@ layout  : wiki
 title   : 파일 할당 테이블(File Allocation Table, FAT)
 summary : 
 date    : 2023-05-16 06:13:09 +0900
-updated : 2023-05-16 06:32:43 +0900
+updated : 2023-05-20 09:15:37 +0900
 tag     : 
 toc     : true
 public  : true
-parent  : 
+parent  : computer-architecture
 latex   : false
 resource: a436155b-11b7-40fb-8ae0-47bcd6337ef4
 ---

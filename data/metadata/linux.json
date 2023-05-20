@@ -4,5 +4,7 @@
  "parent": "index",
  "url": "/wiki/linux",
  "updated": "2023-05-10 00:58:32 +0900",
- "children": []
+ "children": [
+  "linux/install_ruby_2.7"
+ ]
 }

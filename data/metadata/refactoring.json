@@ -3,10 +3,12 @@
  "title": "refactoring",
  "parent": "index",
  "url": "/wiki/refactoring",
- "updated": "2023-05-11 22:59:17 +0900",
+ "updated": "2023-05-20 09:24:44 +0900",
  "children": [
+  "refactoring/basic",
   "refactoring/data_organization",
   "refactoring/Encapsulation",
+  "refactoring/move_function",
   "refactoring/simplify_conditional_logic"
  ]
 }
