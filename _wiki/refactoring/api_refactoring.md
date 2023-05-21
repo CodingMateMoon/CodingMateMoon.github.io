@@ -3,7 +3,7 @@ layout  : wiki
 title   : API 리팩토링
 summary : 
 date    : 2023-05-21 10:40:16 +0900
-updated : 2023-05-21 10:48:11 +0900
+updated : 2023-05-21 21:26:53 +0900
 tag     : 
 toc     : true
 public  : true
@@ -36,7 +36,15 @@ e.g) deliveryDate(Order order, boolean isRush) -> regularDeliveryDate(Order orde
 
 ## 객체 통째로 넘기기 (Preserve Whole Object)
 
-함수의 매개변수가 많은 경우 객체를 넘겨서 줄입니다. 
+what?
+함수의 매개변수가 많은 경우 객체를 넘겨서 파라미터 개수를 줄이는 기법입니다. 
+함수로 넘기는 파라미터 중 여러 파라미터가 하나의 object, record에서 파생된 값들인 경우가 종종 있는데 해당하는 object, record를 파라미터로 넘겨서 파라미터 개수를 줄이는 기법
+
+why? 
+object, record 등을 함수의 파라미터로 넘겨서 파라미터 개수를 줄이고 객체 단위로 필요한 데이터들을 관리할 수 있습니다. 이 기술을 적용하기 전 해당 메소드가 오브젝트 타입, 레코드 타입에 의존해도 되는가, 다른 레코드 타입도 이 메서드로 비슷한 일을 할 것인가에 대해 고려하고 primitive 타입 파라미터를 받도록 유지할 수도 있습니다.
+
+e.g) 
+private String getMarkdownForParticipant(String username, Map<Integer, Boolean> homework)  ->  private String getMarkdownForParticipant(Participant participant)
 
 ## 매개변수를 질의 함수로 바꾸기 (Replace Parameter with Query)
 
