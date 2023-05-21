@@ -1,9 +1,9 @@
 ---
 layout  : wiki
-title   : git check version
+title   : git 특정 커밋 버전으로 되돌리기
 summary : 
 date    : 2023-04-23 02:41:15 +0900
-updated : 2023-04-23 15:02:42 +0900
+updated : 2023-05-21 11:14:36 +0900
 tag     : 
 toc     : true
 public  : true
@@ -16,3 +16,16 @@ resource: E401D44D-9D83-4C9E-8A65-877A7EE162D8
 
 1. Git log [file_name]
 2. git checkout [commit-version(2c95ea~)] [file_name]
+
+e.g)
+* 특정 시점 파일로 checkout
+```console
+git checkout a0bfcc8a2d90c872ca62dbb4d33abe83a2777e4d a.sh
+```
+
+* stage에 들어가지 않은 수정한 파일을 수정 이전으로 되돌리기
+```console
+git checkout -- .
+git checkout -- a.sh
+```
+

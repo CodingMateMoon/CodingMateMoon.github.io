@@ -4,7 +4,7 @@ title   : wiki
 toc     : true
 public  : true
 comment : false
-updated : 2023-05-18 08:45:25 +0900
+updated : 2023-05-21 11:15:32 +0900
 regenerate: true
 ---
 
@@ -17,7 +17,6 @@ regenerate: true
 
 ## [[/git]]
 * [[/git/git_check_v]]
-* [[/git/git_test]]
 
 ## [[oracle]]
 * [[oracle/oracle_connection]]
@@ -34,6 +33,7 @@ regenerate: true
 * [[refactoring/move_function]]
 * [[refactoring/data_organization]]
 * [[refactoring/simplify_conditional_logic]]
+* [[refactoring/api_refactoring]]
 
 ---
 
