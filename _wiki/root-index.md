@@ -4,7 +4,7 @@ title   : wiki
 toc     : true
 public  : true
 comment : false
-updated : 2023-05-21 11:15:32 +0900
+updated : 2023-05-23 07:22:29 +0900
 regenerate: true
 ---
 
@@ -34,6 +34,7 @@ regenerate: true
 * [[refactoring/data_organization]]
 * [[refactoring/simplify_conditional_logic]]
 * [[refactoring/api_refactoring]]
+* [[refactoring/inheritance]]
 
 ---
 

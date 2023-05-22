@@ -8,6 +8,7 @@
   "refactoring/basic",
   "refactoring/data_organization",
   "refactoring/Encapsulation",
+  "refactoring/inheritance",
   "refactoring/move_function",
   "refactoring/simplify_conditional_logic"
  ]

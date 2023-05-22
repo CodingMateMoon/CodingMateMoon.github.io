@@ -2,5 +2,6 @@
  "refactoring",
  "refactoring/data_organization",
  "refactoring/Encapsulation",
+ "refactoring/inheritance",
  "refactoring/simplify_conditional_logic"
 ]
