@@ -11,7 +11,8 @@ FAIL_COUNT=0
 for CHANGED_FILE in $CHANGE_LIST; do
     echo "이미지경로를 교정할 문서 파일: [$CHANGED_FILE]"
 
-    RESOURCE_DIR=`head $CHANGED_FILE | egrep -o '[A-F0-9-]{2}/[A-F0-9-]{34}$'`
+    #RESOURCE_DIR=`head $CHANGED_FILE | egrep -o '[A-F0-9-]{2}/[A-F0-9-]{34}$'`
+    RESOURCE_DIR=`head $CHANGED_FILE | egrep -o '[a-f0-9-]{2}/[a-f0-9-]{34}$'`
     echo "RESOURCE_DIR : $RESOURCE_DIR"
     TARGET_PATH="./resource/$RESOURCE_DIR"
 
@@ -23,13 +24,18 @@ for CHANGED_FILE in $CHANGE_LIST; do
     # URI_LIST=`ag "https://pbs.twimg.com/media/.*?(png|jpg|gif|mp4)" -o $CHANGED_FILE`
 
     #URI_LIST=`ag "https://((user-images\.githubuser.*?\/[0-9]+\/)|(pbs.twimg.com/media/)|(video.twimg.com/.+_video/)).*?(png|jpg|gif|mp4)" -o $CHANGED_FILE`
-    URI_LIST=`ag "https://((user-images\.githubuser.*?\/$NUM\/)|(pbs.twimg.com/media/)|(video.twimg.com/.+_video/)).*?(png|jpg|gif|mp4)" -o $CHANGED_FILE`
+    #https://github.com/CodingMateMoon/CodingMateMoon.github.io/assets/23370202/8f0523c0-4b07-46a0-a17f-c246271ffc8e
+    #https://github-production-user-asset-6210df.s3.amazonaws.com/23370202/240833817-8f0523c0-4b07-46a0-a17f-c246271ffc8e.png
+    #URI_LIST=`ag "https://((user-images\.githubuser.*?\/$NUM\/)|(pbs.twimg.com/media/)|(video.twimg.com/.+_video/)).*?(png|jpg|gif|mp4)" -o $CHANGED_FILE`
+    URI_LIST=`ag "https://github-production.*?\/$NUM\/.*?(png|jpg|gif|mp4)" -o $CHANGED_FILE`
     echo "URI_LIST : $URI_LIST"
 
     for URI in $URI_LIST; do
         FILE_NAME=`echo $URI | sed 's,^.*/,,'`
+        echo "FILE_NAME : $FILE_NAME"
         RESOLVE_FILE_PATH="$TARGET_PATH/$FILE_NAME"
         RESOLVE_URL=`echo "$RESOLVE_FILE_PATH" | sed -E 's/^\.//'`
+        echo "RESOLVE_URL : $RESOLVE_URL"
 
         echo "작업 대상 URI: [$URI]"
         echo "작업 대상 파일 패스: [$RESOLVE_FILE_PATH]"
@@ -37,7 +43,9 @@ for CHANGED_FILE in $CHANGE_LIST; do
 
         if [ "$?" == "0" ]; then
             echo "DOWNLOAD SUCCESS: $FILE_NAME"
-            sed -i '' -E 's, *https://.*('"$FILE_NAME"') *, '$RESOLVE_URL' ,g' $CHANGED_FILE
+            #sed -i '' -E 's, *https://.*('"$FILE_NAME"') *, '$RESOLVE_URL' ,g' $CHANGED_FILE
+            echo "CHANGED_FILE: $CHANGED_FILE"
+            sed -i -E 's,https://.*('"$FILE_NAME"') *, '$RESOLVE_URL', g' $CHANGED_FILE
 
             git add $RESOLVE_FILE_PATH
 

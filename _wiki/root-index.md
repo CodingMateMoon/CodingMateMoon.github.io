@@ -4,7 +4,7 @@ title   : wiki
 toc     : true
 public  : true
 comment : false
-updated : 2023-05-24 08:13:59 +0900
+updated : 2023-05-25 21:21:19 +0900
 regenerate: true
 ---
 
@@ -37,5 +37,8 @@ regenerate: true
 * [[refactoring/api_refactoring]]
 * [[refactoring/inheritance]]
 
+## [[test]]
+* [[test/test1]]
+* [[test/test2]]
 ---
 

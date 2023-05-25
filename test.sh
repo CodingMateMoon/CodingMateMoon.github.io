@@ -1,11 +1,13 @@
-CHANGED_FILE=./test1
-#NUM=23370202
-NUM=
+CHANGED_FILE=./test2
+NUM=23370202
+#NUM=
 echo $CHANGED_FILE
 #URI_LIST=`ag "https://((user-images\.githubusercontent.*?\/$NUM\/)|(pbs.twimg.com/media/)|(video.twimg.com/.+_video/)).*?(png|jpg|gif|mp4)" -o $CHANGED_FILE`
 #https://user-images.githubusercontent.com/23370202/233828006-f7031b60-4c08-45f6-98a0-efc5d993b123.png
 #URI_LIST=`ag "https://((user-images\.githubuser.*?\/[0-9]+\/)).*?(png|jpg|gif|mp4)" -o $CHANGED_FILE`
-URI_LIST=`ag "https://((user-images\.githubuser.*?\/[0-9]+\/)|(pbs.twimg.com/media/)|(video.twimg.com/.+_video/)).*?(png|jpg|gif|mp4)" -o $CHANGED_FILE`
+#https://github.com/CodingMateMoon/CodingMateMoon.github.io/assets/23370202/8f0523c0-4b07-46a0-a17f-c246271ffc8e
+#https://github-production-user-asset-6210df.s3.amazonaws.com/23370202/240833817-8f0523c0-4b07-46a0-a17f-c246271ffc8e.png
+URI_LIST=`ag "https://github-production.*?\/$NUM\/.*?(png|jpg|gif|mp4)" -o $CHANGED_FILE`
 echo "URI_LIST : $URI_LIST"
 
 
