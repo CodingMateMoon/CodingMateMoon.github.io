@@ -6,6 +6,7 @@
  "updated": "2023-05-09 05:08:19 +0900",
  "children": [
   "oracle/oracle_connection",
-  "oracle/oracle_data_structure"
+  "oracle/oracle_data_structure",
+  "oracle/oracle19c_docker_install"
  ]
 }

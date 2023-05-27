@@ -4,7 +4,7 @@ title   : wiki
 toc     : true
 public  : true
 comment : false
-updated : 2023-05-27 08:39:05 +0900
+updated : 2023-05-27 20:58:13 +0900
 regenerate: true
 ---
 
@@ -21,6 +21,7 @@ regenerate: true
 ## [[oracle]]
 * [[oracle/oracle_connection]]
 * [[oracle/oracle_data_structure]]
+* [[oracle/oracle19c_docker_install]]
 
 ## [[computer-architecture]]
 * [[computer-architecture/FAT]]
