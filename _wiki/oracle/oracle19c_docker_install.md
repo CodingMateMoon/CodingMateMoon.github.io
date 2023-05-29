@@ -3,7 +3,7 @@ layout  : wiki
 title   : Oracle19c Docker 설치
 summary : 
 date    : 2023-05-27 20:58:13 +0900
-updated : 2023-05-27 21:29:00 +0900
+updated : 2023-05-29 12:44:33 +0900
 tag     : 
 resource: 42/44dc8b-b18c-47fc-af75-1fe47844407c
 toc     : true
@@ -174,6 +174,31 @@ Version 19.3.0.0.0
 SQL> 
 System altered.
 ...
+```
+
+### Oracle 접속 테스트
+```console
+jhmoon@jhmoon:~$ docker ps -a
+CONTAINER ID   IMAGE                       COMMAND                  CREATED        STATUS                      PORTS                                            NAMES
+261d716abc02   oracle/database:19.3.0-ee   "/bin/sh -c 'exec $O…"   40 hours ago   Exited (255) 1 second ago   0.0.0.0:1521->1521/tcp, 0.0.0.0:5500->5500/tcp   oracle
+jhmoon@jhmoon:~$ docker start oracle
+oracle
+jhmoon@jhmoon:~$ docker ps -a
+CONTAINER ID   IMAGE                       COMMAND                  CREATED        STATUS                            PORTS                                            NAMES
+261d716abc02   oracle/database:19.3.0-ee   "/bin/sh -c 'exec $O…"   40 hours ago   Up 3 seconds (health: starting)   0.0.0.0:1521->1521/tcp, 0.0.0.0:5500->5500/tcp   oracle
+jhmoon@jhmoon:~$ docker exec -it oracle sqlplus sys/oracle@//localhost:1521/ORCLCDB as sysdba
+
+SQL*Plus: Release 19.0.0.0.0 - Production on Sun May 28 13:13:42 2023
+Version 19.3.0.0.0
+
+Copyright (c) 1982, 2019, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production
+Version 19.3.0.0.0
+
+SQL>
 ```
 
 ## 참고자료 
