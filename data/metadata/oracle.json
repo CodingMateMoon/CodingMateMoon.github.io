@@ -7,6 +7,7 @@
  "children": [
   "oracle/oracle_connection",
   "oracle/oracle_data_structure",
-  "oracle/oracle19c_docker_install"
+  "oracle/oracle19c_docker_install",
+  "oracle/wait_and_lock_wait"
  ]
 }
