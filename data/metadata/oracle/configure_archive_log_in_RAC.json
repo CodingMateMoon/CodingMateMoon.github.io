@@ -1,0 +1,10 @@
+{
+ "type": "wiki",
+ "title": "RAC 환경에서 archive log 저장 경로를 로컬 파일시스템으로 설정하는 방법",
+ "summary": "",
+ "parent": "oracle",
+ "url": "/wiki/oracle/configure_archive_log_in_RAC",
+ "updated": "2023-05-31 23:33:14 +0900",
+ "resource": "30/0b1d63-03dc-4517-ae29-915cb6e27c37",
+ "children": []
+}

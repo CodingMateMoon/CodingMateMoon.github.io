@@ -9,6 +9,8 @@
  "/wiki/linux/install_ruby_2.7",
  "/wiki/mathjax-latex",
  "/wiki/oracle",
+ "/wiki/oracle/alter_tablespace",
+ "/wiki/oracle/configure_archive_log_in_RAC",
  "/wiki/oracle/oracle_connection",
  "/wiki/oracle/oracle_data_structure",
  "/wiki/oracle/oracle19c_docker_install",
