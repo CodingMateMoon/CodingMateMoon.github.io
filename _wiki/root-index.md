@@ -4,7 +4,7 @@ title   : wiki
 toc     : true
 public  : true
 comment : false
-updated : 2023-06-01 07:28:39 +0900
+updated : 2023-06-01 07:31:10 +0900
 regenerate: true
 ---
 
@@ -24,6 +24,7 @@ regenerate: true
 * [[oracle/wait_and_lock_wait]]
 * [[oracle/oracle19c_docker_install]]
 * [[oracle/configure_archive_log_in_RAC]]
+* [[oracle/alter_tablespace]]
 
 ## [[computer-architecture]]
 * [[computer-architecture/FAT]]
