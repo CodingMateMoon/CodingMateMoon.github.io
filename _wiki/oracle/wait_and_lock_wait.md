@@ -3,7 +3,7 @@ layout  : wiki
 title   : 대기와 Lock 대기
 summary : 
 date    : 2023-05-30 23:16:58 +0900
-updated : 2023-05-31 08:37:52 +0900
+updated : 2023-06-02 09:15:04 +0900
 tag     : 
 resource: 87/498ebc-12b6-492e-82da-9adb3c5d1cb4
 toc     : true
@@ -31,3 +31,7 @@ e.g, 데이터 파일에서 데이터를 읽어오는 'db file sequential read',
 (2) 이상 상태 등 쓸데없이 SQL을 기다리게 하는 대기.
 
 Why? 사용자가 특정 테이블에 Lock을 걸어두고는 계속 잡고 놓아주지 않는 경우 발생할 수 있습니다. 
+
+### Lock에 의한 대기
+Lock에 의한 대기는 Lock 걸려있는 대상에 다시 Lock을 걸려고 할 때 대기가 발생합니다.
+![image]( /resource/87/498ebc-12b6-492e-82da-9adb3c5d1cb4/242753488-5776d139-4ad2-4635-8e72-e381800d4af6.png)

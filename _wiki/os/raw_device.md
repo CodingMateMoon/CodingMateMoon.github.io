@@ -1,9 +1,9 @@
----
+[[---]]
 layout  : wiki
 title   : Raw Device 개념
 summary : 
 date    : 2023-05-11 08:34:15 +0900
-updated : 2023-05-21 11:06:12 +0900
+updated : 2023-06-02 08:54:49 +0900
 tag     : 
 toc     : true
 public  : true
