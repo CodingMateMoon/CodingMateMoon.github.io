@@ -3,7 +3,7 @@ layout  : wiki
 title   : 오라클 데이터 구조
 summary : 
 date    : 2023-05-24 08:13:59 +0900
-updated : 2023-05-27 17:00:20 +0900
+updated : 2023-06-03 10:52:48 +0900
 tag     : oracle
 resource: d6/885d55-82ce-4803-a004-f30604824ae7
 toc     : true
@@ -36,5 +36,5 @@ latex   : false
  
 
 ## 참고자료
-- 그림으로 공부하는 오라클 구조(책)
-- [DB/Oracle] 오라클 데이터 구조에 대해 알아보자-<https://loosie.tistory.com/521>
+- 그림으로 공부하는 오라클 구조(스기타아츠시 외 4명)
+- 오라클 데이터 구조에 대해 알아보자-<https://loosie.tistory.com/521>

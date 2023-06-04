@@ -11,6 +11,7 @@
  "/wiki/oracle",
  "/wiki/oracle/alter_tablespace",
  "/wiki/oracle/configure_archive_log_in_RAC",
+ "/wiki/oracle/ORA-12162",
  "/wiki/oracle/oracle_connection",
  "/wiki/oracle/oracle_data_structure",
  "/wiki/oracle/oracle19c_docker_install",

@@ -3,7 +3,7 @@ layout  : wiki
 title   : 대기와 Lock 대기
 summary : 
 date    : 2023-05-30 23:16:58 +0900
-updated : 2023-06-02 09:15:04 +0900
+updated : 2023-06-03 10:57:52 +0900
 tag     : 
 resource: 87/498ebc-12b6-492e-82da-9adb3c5d1cb4
 toc     : true
@@ -35,3 +35,7 @@ Why? 사용자가 특정 테이블에 Lock을 걸어두고는 계속 잡고 놓�
 ### Lock에 의한 대기
 Lock에 의한 대기는 Lock 걸려있는 대상에 다시 Lock을 걸려고 할 때 대기가 발생합니다.
 ![image]( /resource/87/498ebc-12b6-492e-82da-9adb3c5d1cb4/242753488-5776d139-4ad2-4635-8e72-e381800d4af6.png)
+
+## 참고자료
+- 그림으로 공부하는 오라클 구조(스기타아츠시 외 4명)
+- 오라클의 대기와 Lock에 대해 알아보자:<https://loosie.tistory.com/525>
