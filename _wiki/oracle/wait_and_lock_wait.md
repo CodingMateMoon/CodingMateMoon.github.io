@@ -3,7 +3,7 @@ layout  : wiki
 title   : 대기와 Lock 대기
 summary : 
 date    : 2023-05-30 23:16:58 +0900
-updated : 2023-06-06 16:19:33 +0900
+updated : 2023-06-06 23:11:30 +0900
 tag     : 
 resource: 87/498ebc-12b6-492e-82da-9adb3c5d1cb4
 toc     : true
@@ -70,7 +70,7 @@ ERROR at line 1:
 ORA-00060: deadlock detected while waiting for resource
 ```
 
-#### Lock 걸린 테이블의 sid, serial 확인
+#### Lock 걸린 테이블의 sid, serial 조회
 
 ```sql
 SQL>
@@ -92,7 +92,7 @@ SELECT A.SID
        254	45859	   73348 T
 ```
 
-#### Lock 상세 정보 확인
+#### Lock 상세 정보 조회
 
 ```sql
 SELECT /*+ ORDERED */
@@ -120,6 +120,14 @@ ORDER BY S.SID, L.TYPE
 | TEST     | 254 | 45859   | sqlplus@261d716abc02 (TNS V1-V3) | TM        | 73348  | 2806  | RX   | NONE      |
 | TEST     | 254 | 45859   | sqlplus@261d716abc02 (TNS V1-V3) | TX        | 393222 | 2806  | X    | NONE      |
 | TEST     | 254 | 45859   | sqlplus@261d716abc02 (TNS V1-V3) | TX        | 196627 | 2776  | NONE | X         |
+
+
+##### LOCK TYPE 종류
+
+| LOCK TYPE | 특징                                                                                         | LMODE        |
+|-----------|----------------------------------------------------------------------------------------------|--------------|
+| TX        | row에 거는 lock. 같은 row에 대하여 다른 MODE의 Lock을 허용하지 않음                          | X(Exclusive) |
+| TM        | 테이블에 거는 lock. 테이블의 정의를 변경하는 작업(DROP, ALTER) 불가. 여러 트랜잭션 수행 가능 | RX, RS       |
 
 #### sid, serial 번호로 세션 해제
 ```sql
