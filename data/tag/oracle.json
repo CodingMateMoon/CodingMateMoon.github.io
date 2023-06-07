@@ -1,4 +1,5 @@
 [
  "oracle/ORA-12162",
- "oracle/oracle_data_structure"
+ "oracle/oracle_data_structure",
+ "oracle/wait_and_lock_wait"
 ]

@@ -3,8 +3,8 @@ layout  : wiki
 title   : 대기와 Lock 대기
 summary : 
 date    : 2023-05-30 23:16:58 +0900
-updated : 2023-06-06 23:11:30 +0900
-tag     : 
+updated : 2023-06-08 08:04:31 +0900
+tag     : oracle
 resource: 87/498ebc-12b6-492e-82da-9adb3c5d1cb4
 toc     : true
 public  : true
@@ -164,7 +164,91 @@ SQL> select * from T;
 	 2	     3
 ```
 
+#### alert, trace 파일
+Deadlock 발생 시 한쪽의 처리가 오라클에 의해 자동으로 rollback 되며 alert, trace 파일에 해당 내역이 기록됩니다.
+
+##### alert, trace 파일 위치 확인
+```console
+SQL> select value from v$diag_info where name='Diag Trace' ;
+
+VALUE
+--------------------------------------------------------------------------------
+/opt/oracle/diag/rdbms/orclcdb/ORCLCDB/trace
+
+
+bash-4.2$ pwd
+/opt/oracle/diag/rdbms/orclcdb/ORCLCDB/trace
+bash-4.2$ ls -al|grep -e 4562 -e alert
+-rw-r-----  1 oracle dba 2165753 Jun  6 05:37 ORCLCDB_ora_4562.trc
+-rw-r-----  1 oracle dba  535416 Jun  6 05:37 ORCLCDB_ora_4562.trm
+-rw-r-----  1 oracle dba  351012 Jun  7 22:58 alert_ORCLCDB.log
+```
+
+##### alert_ORCLCDB.log
+
+```console
+2023-06-06T05:37:54.555428+00:00
+Errors in file /opt/oracle/diag/rdbms/orclcdb/ORCLCDB/trace/ORCLCDB_ora_4562.trc:
+2023-06-06T05:37:54.830624+00:00
+ORA-00060: Deadlock detected. See Note 60.1 at My Oracle Support for Troubleshooting ORA-60 Errors. More info in file /opt/oracle/diag/rdbms/orclcdb/ORCLCDB/trace/ORCLCDB_ora_4562.trc.
+2023-06-06T05:55:13.031479+00:00
+```
+
+
+##### ORCLCDB_ora_4562.trc (sed -n '12072,12118p' ORCLCDB_ora_4562.trc)
+
+```console
+*** 2023-06-06T05:37:54.554944+00:00 (CDB$ROOT(1))
+DEADLOCK DETECTED ( ORA-00060 )
+See Note 60.1 at My Oracle Support for Troubleshooting ORA-60 Errors
+
+[Transaction Deadlock]
+ 
+The following deadlock is not an ORACLE error. It is a
+deadlock due to user error in the design of an application
+or from issuing incorrect ad-hoc SQL. The following
+information may aid in determining the deadlock:
+ 
+Deadlock graph:
+                                          ------------Blocker(s)-----------  ------------Waiter(s)------------
+Resource Name                             process session holds waits serial  process session holds waits serial
+TX-00030013-000003CD-00000001-00000000         73     136     X        39548      74     254           X  45859
+TX-00060006-000003BB-00000001-00000000         74     254     X        45859      73     136           X  39548
+ 
+----- Information for waiting sessions -----
+Session 136:
+  sid: 136 ser: 39548 audsid: 440036 user: 107/TEST
+  pdb: 1/CDB$ROOT
+    flags: (0x41) USR/- flags2: (0x40009) -/-/INC
+    flags_idl: (0x1) status: BSY/-/-/- kill: -/-/-/-
+  pid: 73 O/S info: user: oracle, term: UNKNOWN, ospid: 4562
+    image: oracle@261d716abc02 (TNS V1-V3)
+  client details:
+    O/S info: user: oracle, term: pts/1, ospid: 4561
+    machine: 261d716abc02 program: sqlplus@261d716abc02 (TNS V1-V3)
+    application name: SQL*Plus, hash value=3669949024
+  current SQL:
+  update T set n1= 4 where id = 2
+ 
+Session 254:
+  sid: 254 ser: 45859 audsid: 440071 user: 107/TEST
+  pdb: 1/CDB$ROOT
+    flags: (0x41) USR/- flags2: (0x40009) -/-/INC
+    flags_idl: (0x1) status: BSY/-/-/- kill: -/-/-/-
+  pid: 74 O/S info: user: oracle, term: UNKNOWN, ospid: 5176
+    image: oracle@261d716abc02 (TNS V1-V3)
+  client details:
+    O/S info: user: oracle, term: pts/3, ospid: 5175
+    machine: 261d716abc02 program: sqlplus@261d716abc02 (TNS V1-V3)
+    application name: SQL*Plus, hash value=3669949024
+  current SQL:
+  update T set n1 = 5 where id = 1
+ 
+----- End of information for waiting sessions -----
+```
+
 ## 참고자료
 - 그림으로 공부하는 오라클 구조(스기타아츠시 외 4명)
 - 오라클의 대기와 Lock에 대해 알아보자:<https://loosie.tistory.com/525>
 - 오라클 LOCK 걸린 개체 확인 및 LOCK 해제 : <https://hello-nanam.tistory.com/23>
+- alert log 파일 위치 : <https://fliedcat.tistory.com/208>
