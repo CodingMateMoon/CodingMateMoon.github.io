@@ -3,7 +3,7 @@ layout  : wiki
 title   : 대기와 Lock 대기
 summary : 
 date    : 2023-05-30 23:16:58 +0900
-updated : 2023-06-08 08:04:31 +0900
+updated : 2023-06-08 08:29:21 +0900
 tag     : oracle
 resource: 87/498ebc-12b6-492e-82da-9adb3c5d1cb4
 toc     : true
@@ -247,6 +247,13 @@ Session 254:
 ----- End of information for waiting sessions -----
 ```
 
+## Latch
+
+what? 
+다중 처리를 구현하기 위한 Lock으로 오라클 내부에서 자동으로 얻으며 SQL 1회 실행을 위해 여러 Latch를 얻고 해제하는 것을 반복합니다.
+
+why?
+Latch는 병렬 처리를 가능하게 하고 높은 처리량을 실현하기 위해 존재하는데 메모리나 데이터를 조작할 때 상호 배타적(mutual exclusive)으로 처리함으로써 데이터가 손상되는 것을 방지합니다. Lock을 용도에 따라 나누고 Lock(latch)의 종류와 수를 늘림으로써 다른 세션들과 경합할 가능성을 줄일 수 있습니다.
 ## 참고자료
 - 그림으로 공부하는 오라클 구조(스기타아츠시 외 4명)
 - 오라클의 대기와 Lock에 대해 알아보자:<https://loosie.tistory.com/525>
