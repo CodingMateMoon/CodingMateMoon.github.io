@@ -3,7 +3,7 @@ layout  : wiki
 title   : 대기와 Lock 대기
 summary : 
 date    : 2023-05-30 23:16:58 +0900
-updated : 2023-06-10 10:24:06 +0900
+updated : 2023-06-11 16:05:16 +0900
 tag     : oracle
 resource: 87/498ebc-12b6-492e-82da-9adb3c5d1cb4
 toc     : true
@@ -255,6 +255,11 @@ what?
 why?
 Latch는 병렬 처리를 가능하게 하고 높은 처리량을 실현하기 위해 존재하는데 메모리나 데이터를 조작할 때 상호 배타적(mutual exclusive)으로 처리함으로써 데이터가 손상되는 것을 방지합니다. SGA 내부의 공유 데이터에 대한 배타적인 잠금을 보장하여 메모리 구조의 무결성을 유지합니다. 하나의 프로세스만이 Latch를 보유할 수 있으며 SGA에 접근하는 모든 프로세스는 해당 영역을 관장하는 Latch를 획득해야만 접근이 가능합니다.  Lock을 용도에 따라 나누고 Lock(latch)의 종류와 수를 늘림으로써 다른 세션들과 경합할 가능성을 줄일 수 있습니다.
 ![image]( /resource/87/498ebc-12b6-492e-82da-9adb3c5d1cb4/244839270-034d0d2c-4ec9-43cf-8849-a73189da2e65.png)
+
+현실에서는 Latch 경합이 발생하는 경우가 많은데 CPU, OS와 관련이 있습니다. OS에서는 여러 처리를 동시에 실행하는 멀티태스킹이 존재하고 처리중인 CPU를 가로채는 동작인 선점(preemptive)이 존재합니다.
+![image]( /resource/87/498ebc-12b6-492e-82da-9adb3c5d1cb4/244918962-b596ca00-e3f6-4e97-be05-29491cddadae.png)
+
+![image]( /resource/87/498ebc-12b6-492e-82da-9adb3c5d1cb4/244919452-23bcf977-0e0d-4da0-972a-85a62ac41065.png)
 
 
 ## 참고자료
