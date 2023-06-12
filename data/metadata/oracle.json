@@ -10,6 +10,7 @@
   "oracle/oracle_connection",
   "oracle/oracle_data_structure",
   "oracle/oracle19c_docker_install",
+  "oracle/redo_undo",
   "oracle/wait_and_lock_wait"
  ]
 }

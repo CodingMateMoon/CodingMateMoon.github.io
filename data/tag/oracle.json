@@ -1,5 +1,6 @@
 [
  "oracle/ORA-12162",
  "oracle/oracle_data_structure",
+ "oracle/redo_undo",
  "oracle/wait_and_lock_wait"
 ]

@@ -4,7 +4,7 @@ title   : wiki
 toc     : true
 public  : true
 comment : false
-updated : 2023-06-04 13:34:55 +0900
+updated : 2023-06-13 03:05:38 +0900
 regenerate: true
 ---
 
@@ -27,6 +27,7 @@ regenerate: true
 * [[oracle/configure_archive_log_in_RAC]]
 * [[oracle/alter_tablespace]]
 * [[oracle/ORA-12162]]
+* [[oracle/redo_undo]]
 
 ## [[computer-architecture]]
 * [[computer-architecture/FAT]]
