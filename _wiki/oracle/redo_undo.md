@@ -3,7 +3,7 @@ layout  : wiki
 title   : REDO와 UNDO
 summary : 
 date    : 2023-06-13 03:05:38 +0900
-updated : 2023-06-18 14:25:17 +0900
+updated : 2023-06-18 17:29:39 +0900
 tag     : oracle
 resource: a3/52a6cd-e960-4281-b813-1fa327510854
 toc     : true
@@ -67,6 +67,9 @@ REDO 로그의 구조는 REDO 로그용 메모리로서 REDO 로그 버퍼가 �
 REDO 로그 파일은 문제 발생 상황에 대비하여 다중화가 필요합니다. 일반적으로 REDO 로그 그룹이 여러 개가 존재하고 각 그룹 안에 멤버(REDO 로그 파일)를 추가합니다. 기본적으로 REDO 로그 그룹은 3개 정도 있고 각 그룹당 멤버는 1개씩 존재하는데 다중화를 할 경우 각 그룹안의 멤버(REDO의 복사본을 저장)를 추가하는 방식으로 다중화가 이루어집니다.
 ![image]( /resource/a3/52a6cd-e960-4281-b813-1fa327510854/246645338-de71a8e9-e965-46cf-9b41-658b2b59ac7f.png)
 
+서버 프로세스는 commit 시 LGWR 프로세스에게 REDO 로그를 기록하도록 요청합니다. 요청을 받은 LGWR 프로세스는 REDO 로그를 REDO 로그 파일에 기록한 뒤 서버 프로세스에게 기록이 끝났다고 응답합니다.  그후 서버 프로세스는 commit 완료된 것을 클라이언트에게 응답합니다. 
+Statspack(또는 AWR)이나 v$session_wait 등에서 자주 볼 수 있는 'log file sync'라는 대기 이벤트는 주로 LGWR가 REDO 로그를 기록하는 것을 기다리는 것입니다. Oracle의 경우 commit 전 데이터, commit 후 데이터 모두 REDO에 기록하기 때문에 항상 발생하는데 커밋 횟수를 줄이거나 write 캐시를 가진 스토리지(Oracle의 write는 디스크에 기록되기 전까지 끝나지 않지만 write 캐시가 있을 경우 write 캐시에 기록하는 것으로 끝남)를 사용할 경우 조금 더 시간을 줄일 수 있습니다. 
+또한 REDO 로그에 관련한 처리 과정들은 Latch 보호하고 있으며 Statspack(또는 AWR)에서  'redo copy', 'redo allocation' 등으로 표시되는 Latch가 REDO 로그를 위한 Latch입니다.
 
 
 
