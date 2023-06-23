@@ -3,7 +3,7 @@ layout  : wiki
 title   : REDO와 UNDO
 summary : 
 date    : 2023-06-13 03:05:38 +0900
-updated : 2023-06-23 09:05:35 +0900
+updated : 2023-06-24 01:07:39 +0900
 tag     : oracle
 resource: a3/52a6cd-e960-4281-b813-1fa327510854
 toc     : true
@@ -104,7 +104,7 @@ how? 읽기 일관성을 위해 UNDO를 사용합니다. 읽기 일관성은 데
 
 ### COMMIT되지 않은 데이터를 읽어올 때의 동작
  Oracle에서는 기본적으로 고립성(isolation)을 지키기 위해 'read committed'라는 동작을 하도록 설정되어 있습니다. 이는 '다른 세션에서 COMMIT한 변경 데이터는 읽을 수 있다'는 특징을 가지고 있습니다. 그러나 다른 세션에서 COMMIT되지 않은 변경 데이터는 읽어올 수 없습니다. COMMIT되지 않은 다른 세션의 데이터를 읽어올 때도 읽기 일관성과 마찬가지로 변경 전 데이터를 보여주며 필요한 경우 UNDO를 사용해 과거의 데이터를 메모리 위에 재현하는 방식으로 구현합니다.
-![image](https://github.com/CodingMateMoon/CodingMateMoon.github.io/assets/23370202/34c40733-a446-465c-8fff-0879aebc6964)
+![image]( /resource/a3/52a6cd-e960-4281-b813-1fa327510854/248101003-34c40733-a446-465c-8fff-0879aebc6964.png)
 
 ### ORA-01555 Snapshot too old 에러가 발생했을 때의 동작
 what? 과거의 데이터를 보려 했으나 필요한 정보가 없어진 경우를 의미합니다. 
