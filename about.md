@@ -22,8 +22,10 @@ latex: true
 
 > Import thing is not to give up but to stand up and reflect.
 > Enjoy the journey, protect and strengthen the system.
+> Just do it steadily.  
 > 중요한 것은 포기하지 않고 굳건히 일어서서 성찰하고 나아가는 것이다.
 > 여정을 즐기고 시스템을 지키며 강화하자.
+> 그냥 꾸준히 하자.
 
 
 ## About Me
