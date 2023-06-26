@@ -19,13 +19,12 @@ latex: true
 </div>
 
 ## Motto
-
+> If you think it's truly valuable, try to keep that value, deliberately practice, just do it steadily.
 > Import thing is not to give up but to stand up and reflect.
 > Enjoy the journey, protect and strengthen the system.
-> Just do it steadily.  
+> 정말 가치있다고 생각한다면 그 가치를 지키기 위해 노력하고 의도적 수련을 하며 그냥 꾸준히 실천하자.
 > 중요한 것은 포기하지 않고 굳건히 일어서서 성찰하고 나아가는 것이다.
 > 여정을 즐기고 시스템을 지키며 강화하자.
-> 그냥 꾸준히 하자.
 
 
 ## About Me
