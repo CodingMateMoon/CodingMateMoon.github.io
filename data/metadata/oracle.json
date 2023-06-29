@@ -6,6 +6,7 @@
  "updated": "2023-05-09 05:08:19 +0900",
  "children": [
   "oracle/configure_archive_log_in_RAC",
+  "oracle/multitenant_architecture",
   "oracle/ORA-12162",
   "oracle/oracle_connection",
   "oracle/oracle_data_structure",

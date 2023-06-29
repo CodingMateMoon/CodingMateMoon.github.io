@@ -4,7 +4,7 @@ title   : wiki
 toc     : true
 public  : true
 comment : false
-updated : 2023-06-13 03:05:38 +0900
+updated : 2023-06-28 08:23:25 +0900
 regenerate: true
 ---
 
@@ -28,6 +28,7 @@ regenerate: true
 * [[oracle/alter_tablespace]]
 * [[oracle/ORA-12162]]
 * [[oracle/redo_undo]]
+* [[oracle/multitenant_architecture]]
 
 ## [[computer-architecture]]
 * [[computer-architecture/FAT]]
