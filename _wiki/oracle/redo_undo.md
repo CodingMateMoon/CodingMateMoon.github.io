@@ -1,9 +1,9 @@
----
+[[---]]
 layout  : wiki
 title   : REDO와 UNDO
 summary : 
 date    : 2023-06-13 03:05:38 +0900
-updated : 2023-06-28 07:53:20 +0900
+updated : 2023-06-30 07:47:10 +0900
 tag     : oracle
 resource: a3/52a6cd-e960-4281-b813-1fa327510854
 toc     : true
