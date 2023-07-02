@@ -5,6 +5,7 @@
  "url": "/wiki/oracle",
  "updated": "2023-05-09 05:08:19 +0900",
  "children": [
+  "oracle/backup_recovery",
   "oracle/configure_archive_log_in_RAC",
   "oracle/multitenant_architecture",
   "oracle/ORA-12162",

@@ -4,7 +4,7 @@ title   : wiki
 toc     : true
 public  : true
 comment : false
-updated : 2023-06-28 08:23:25 +0900
+updated : 2023-07-02 20:19:50 +0900
 regenerate: true
 ---
 
@@ -29,6 +29,7 @@ regenerate: true
 * [[oracle/ORA-12162]]
 * [[oracle/redo_undo]]
 * [[oracle/multitenant_architecture]]
+* [[oracle/backup_recovery]]
 
 ## [[computer-architecture]]
 * [[computer-architecture/FAT]]
