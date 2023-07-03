@@ -1,9 +1,9 @@
----
+[[---]]
 layout  : wiki
 title   : Oracle 멀티테넌트 아키텍처(Multi-Tenant Architecture. MTA)
 summary : 
 date    : 2023-06-28 08:23:25 +0900
-updated : 2023-07-02 15:39:21 +0900
+updated : 2023-07-04 08:02:53 +0900
 tag     : oracle
 resource: 94/38b3ab-328d-4e61-a2a5-14f602e7c601
 toc     : true
