@@ -1,4 +1,4 @@
-[[---]]
+---
 layout  : wiki
 title   : REDO와 UNDO
 summary : 
