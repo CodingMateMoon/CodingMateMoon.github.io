@@ -3,7 +3,7 @@ layout  : wiki
 title   : 기본적인 복구의 종류와 동작
 summary : 
 date    : 2023-07-02 20:19:50 +0900
-updated : 2023-07-06 09:19:34 +0900
+updated : 2023-07-07 08:42:59 +0900
 tag     : oracle
 resource: f9/cc6e03-7f8c-49d2-b639-c51bc8022ac1
 toc     : true
@@ -97,6 +97,8 @@ USERS		     /opt/oracle/oradata/ORCLCDB/users02.dbf  ONLINE  NO  07-04 14:05:41
 
 ### (4) 복구 실행
  완전 복구를 수행하기 위해 MOUNT 상태에서 'RECOVER DATABASE;' 라고 입력하면 복구가 시작됩니다. 복구 프로세스는 아카이브 REDO 로그를 읽고 어느 곳의 데이터(블록)를 변경해야 하는지 파악하고 블록이 캐시에 올라와 있지 않은 경우 디스크에서 블록을 읽어 와서 캐시에 올려놓는 동작을 합니다. 복구할 때의 동작은 DML문에 의한 데이터 변경 작업과 거의 같습니다.
+![image]( /resource/f9/cc6e03-7f8c-49d2-b639-c51bc8022ac1/251599534-00890399-f2b3-4f94-a1d6-c74234cc6579.png)
+복구가 끝나면 'Media recovery complete'가 표시됩니다. 하지만 ALTER DATABASE OPEN 명령어까지 실행을 완료하여야 복구를 위한 큰 벽을 넘었다고 볼 수 있습니다.
 
 ## 참고자료
 - 그림으로 공부하는 오라클 구조(스기타아츠시 외 4명)
