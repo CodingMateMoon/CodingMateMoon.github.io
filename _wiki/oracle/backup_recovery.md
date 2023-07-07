@@ -1,9 +1,9 @@
----
+[[---]]
 layout  : wiki
 title   : 기본적인 복구의 종류와 동작
 summary : 
 date    : 2023-07-02 20:19:50 +0900
-updated : 2023-07-07 08:42:59 +0900
+updated : 2023-07-08 00:27:35 +0900
 tag     : oracle
 resource: f9/cc6e03-7f8c-49d2-b639-c51bc8022ac1
 toc     : true
