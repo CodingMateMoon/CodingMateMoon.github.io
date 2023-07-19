@@ -1,10 +1,10 @@
 {
  "type": "wiki",
- "title": "oracle 접속 동작",
+ "title": "커넥션과 서버 프로세스의 생성",
  "summary": "",
  "parent": "oracle",
  "url": "/wiki/oracle/oracle_connection",
- "updated": "2023-07-19 08:41:43 +0900",
+ "updated": "2023-07-19 23:38:41 +0900",
  "resource": "9a01bcc9-7e1e-4cbb-9235-4189eb5302cb",
  "children": []
 }

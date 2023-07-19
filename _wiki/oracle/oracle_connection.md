@@ -1,10 +1,10 @@
 ---
 layout  : wiki
-title   : oracle 접속 동작
+title   : 커넥션과 서버 프로세스의 생성
 summary : 
 date    : 2023-05-09 05:37:45 +0900
-updated : 2023-07-19 08:41:43 +0900
-tag     : 
+updated : 2023-07-19 23:38:41 +0900
+tag     : oracle
 toc     : true
 public  : true
 parent  : [[oracle]]
@@ -111,7 +111,73 @@ The command completed successfully
  마지막 과정은 서버 프로세스를 생성하고 소켓을 인계받는 것입니다. 소켓 생성 후 리스너가 그대로 SQL 처리를 해도 될 것처럼 보이지만 한번 SQL 처리를 시작하면 요청받은 SQL을 처리하느라 다른 처리를 할 수 없게 되므로 전담 영업 담당자인 서버 프로세스를 생성하고 SQL 처리를 인계합니다. 서버 프로세스의 생성은 창고 회사 영업 담당자의 출근으로 비유할 수 있습니다. 영업 담당자의 출근이 고객의 요청이 온 시점에 하는 것이 현실에서의 회사와 다른 부분입니다. 
 서버 프로세스를 생성하기 위해서 OS상에서 프로세스를 생성하고 서버 프로세스가 사용할 수 있는 공유 메모리를 확보해야 합니다. 또한 서버 프로세스용 전용 메모리(PGA)도 확보가 필요합니다. 따라서 서버 프로세스를 한번 생성하는 것은 가벼운 SQL문을 처리할 때 사용하는 CPU 시간보다 훨씬 더 많은 CPU 시간을 사용합니다. 
  리스너는 서버 프로세스 생성이 끝나면 소켓을 서버 프로세스에 인계합니다. 창고 회사로 비유하면 회사의 대표 전화번호로 받은 전화를 접수 데스크가 담당자에게 돌려주는 과정과 같습니다. 리스너가 인계한 후부터 서버 프로세스와 오라클 클라이언트는 직접 송수신하므로 리스너는 자유로워집니다.
+![image]( /resource//254427194-34c3d55a-eded-4aff-9e53-8b68d4345eee.png)
+
+## 접속 동작의 확인
+
+### tnsnames.ora 파일을 사용하지 않으면 어떻게 되는가?
+
+일반적으로 커넥션 디스크립터를 일일이 작성해서 사용하는 것은 번거로우므로 다음과 같이 단축 다이얼로 작성되어 있는 tnsnames.ora 파일을 사용합니다. 빈번하게 접속하지 않는 환경이라면 EZCONNECT(Eazy Connect)라는 방법을 사용하는 것도 가능합니다.
+
+* tnsnames.ora 파일을 사용하지 않고 접속할 때  
+```sql
+SQL> connect scott/tiger@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=192.168.1.11)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=ORCLCDB)))
+connected
+```
+
+* tnsnames.ora 파일을 사용해서 접속할 때  
+```sql
+SQL> connect test/test@O19  <- 커넥션 식별자
+Connected.
+```  
+
+* tnsnames.ora 설정  
+```sql
+O19=
+(DESCRIPTION =
+  (ADDRESS = (PROTOCOL = TCP)(HOST = 0.0.0.0)(PORT = 1521))
+  (CONNECT_DATA =
+    (SERVER = DEDICATED)
+    (SERVICE_NAME = ORCLCDB)
+  )
+)
+```  
+
+* Service Name 조회  
+
+```sql
+SQL> SELECT NAME, DB_UNIQUE_NAME FROM V$DATABASE;
+
+NAME               DB_UNIQUE_NAME
+------------------ ------------------------------------------------------------
+ORCL               ORCL
+```
+
+* SID 조회(RAC 예시)  
+
+```sql
+SQL> SELECT INSTANCE FROM V$THREAD;
+
+INSTANCE
+--------------------------------------------------------------------------------
+ORCL1
+ORCL2
+```
+
+* EZCONNECT를 사용한 접속 예  
+```sql
+SQL> connect test/test@0.0.0.0:1521/ORCLCDB
+Connected.
+```
+
+* tnsnames.ora 파일에 해당하는 데이터가 없을 때  
+```sql
+SQL> connect test/test@O20
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+```
 
 ## 참고자료
 - 그림으로 공부하는 오라클 구조(스기타아츠시 외 4명)
 - Oracle® Database JDBC Java API Reference, Release 21c : <https://docs.oracle.com/en/database/oracle/oracle-database/21/jajdb/index.html>
+- SID, Service Name (thin) 용어 정리 - <https://tyboss.tistory.com/entry/Oracle-SID-Service-Name-%EC%9A%A9%EC%96%B4-%EC%A0%95%EB%A6%AC>
