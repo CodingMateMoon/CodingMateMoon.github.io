@@ -3,7 +3,7 @@ layout  : wiki
 title   : 커넥션과 서버 프로세스의 생성
 summary : 
 date    : 2023-05-09 05:37:45 +0900
-updated : 2023-07-19 23:38:41 +0900
+updated : 2023-07-20 08:46:45 +0900
 tag     : oracle
 toc     : true
 public  : true
@@ -177,7 +177,28 @@ ERROR:
 ORA-12154: TNS:could not resolve the connect identifier specified
 ```
 
+### JDBC URL
+
+* SID  
+```console
+jdbc:oracle:thin:@IP:Port:SID
+jdbc:oracle:thin:@//hostname:port:sid
+```
+
+* Service Name  
+```console
+jdbc:oracle:thin:@IP:Port:ServiceName
+jdbc:oracle:thin:@//hostname:port/serviceName
+```
+
+* Thin 사용  
+```console
+jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=서버IP)(PORT=서버Port)))(CONNECT_DATA=(SERVICE_NAME=ServiceName)))
+```
+
 ## 참고자료
 - 그림으로 공부하는 오라클 구조(스기타아츠시 외 4명)
 - Oracle® Database JDBC Java API Reference, Release 21c : <https://docs.oracle.com/en/database/oracle/oracle-database/21/jajdb/index.html>
-- SID, Service Name (thin) 용어 정리 - <https://tyboss.tistory.com/entry/Oracle-SID-Service-Name-%EC%9A%A9%EC%96%B4-%EC%A0%95%EB%A6%AC>
+- SID, Service Name (thin) 용어 정리 : <https://tyboss.tistory.com/entry/Oracle-SID-Service-Name-%EC%9A%A9%EC%96%B4-%EC%A0%95%EB%A6%AC>
+- Oracle Docs tnsnames : <https://docs.oracle.com/cd/B12037_01/network.101/b10776/tnsnames.htm>
+- Oracle Docs Data Sources and URLs : <https://docs.oracle.com/cd/B28359_01/java.111/b31224/urls.htm#BEIDHCBA>
