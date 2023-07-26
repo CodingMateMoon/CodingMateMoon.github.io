@@ -1,6 +1,7 @@
 [
  "oracle/background_process",
  "oracle/backup_recovery",
+ "oracle/cache_shared_memory",
  "oracle/multitenant_architecture",
  "oracle/ORA-12162",
  "oracle/oracle_connection",

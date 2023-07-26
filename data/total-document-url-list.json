@@ -13,6 +13,7 @@
  "/wiki/oracle/alter_tablespace",
  "/wiki/oracle/background_process",
  "/wiki/oracle/backup_recovery",
+ "/wiki/oracle/cache_shared_memory",
  "/wiki/oracle/configure_archive_log_in_RAC",
  "/wiki/oracle/multitenant_architecture",
  "/wiki/oracle/ORA-12162",

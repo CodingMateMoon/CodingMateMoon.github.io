@@ -7,6 +7,7 @@
  "children": [
   "oracle/background_process",
   "oracle/backup_recovery",
+  "oracle/cache_shared_memory",
   "oracle/configure_archive_log_in_RAC",
   "oracle/multitenant_architecture",
   "oracle/ORA-12162",

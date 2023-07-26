@@ -3,7 +3,7 @@ layout  : wiki
 title   : 커넥션과 서버 프로세스의 생성
 summary : 
 date    : 2023-05-09 05:37:45 +0900
-updated : 2023-07-20 08:46:45 +0900
+updated : 2023-07-26 07:11:21 +0900
 tag     : oracle
 toc     : true
 public  : true
@@ -195,6 +195,24 @@ jdbc:oracle:thin:@//hostname:port/serviceName
 ```console
 jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=서버IP)(PORT=서버Port)))(CONNECT_DATA=(SERVICE_NAME=ServiceName)))
 ```
+
+### 데이터베이스에 접속하지 못할 때 확인해볼 만한 실수들
+'ORA-12154: TNS xxxx' 에러가 발생하면서 접속하지 못하는 경우가 있습니다. 에러의 원인은 다양하지만 그 중 설정 실수인 경우가 의외로 많습니다.
+
+접속할 호스트명(IP)을 잘못 입력한 경우
+tnsnames.ora 파일을 보면 접속할 호스트의 IP를 'HOST = 192.168.56.xxx(통신할 수 없는 호스트)' 부분에서 확인할 수 있습니다. ping, telnet 등 호스트와 통신이 가능한지 확인합니다.
+
+tnsnames.ora가 올바르지 않은 경로에 위치한 경우
+오라클은 기본적으로 $ORACLE_HOME/network/admin 경로의 파일을 확인하는데 올바른 경로에 tnsnames.ora 파일이 있는지 확인합니다. TNS_ADMIN 환경 변수를 설정하여 임의의 경로로 tnsnames.ora의 경로를 설정할 수 있습니다. 
+
+tnsnames.ora에 정의된 내용과 다른 커넥션 식별자를 사용해서 접속을 시도하는 경우
+sqlplus  scott/tiger@ORA18C <- ORA19C의 오타이며 tnsnames.ora에는 존재하지 않습니다. 명령어의 커넥션 식별자가 tnsnames.ora에 존재하고 있는지 확인합니다.
+
+리스너가 기동되어 있지 않은 경우
+접속할 호스트의 리스너가 기동되어 있는지 여부를 확인합니다.
+
+리스너에 서비스명을 등록하지 않은 경우
+리스너가 기동한 직후 서비스명이 자동으로 등록되지 않을 때가 있습니다. 1분 정도 기다리거나 데이터베이스에서 서비스명 등록 명령어를 실행합니다. 
 
 ## 참고자료
 - 그림으로 공부하는 오라클 구조(스기타아츠시 외 4명)
