@@ -4,7 +4,7 @@ title   : wiki
 toc     : true
 public  : true
 comment : false
-updated : 2023-07-08 00:28:07 +0900
+updated : 2023-07-26 07:58:14 +0900
 regenerate: true
 ---
 
@@ -20,6 +20,7 @@ regenerate: true
 * [[git/commonly_used_git_commands]]
 
 ## [[oracle]]
+* [[oracle/cache_shared_memory]]
 * [[oracle/oracle_connection]]
 * [[oracle/oracle_data_structure]]
 * [[oracle/wait_and_lock_wait]]
