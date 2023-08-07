@@ -1,4 +1,4 @@
-[[---]]
+---
 layout  : wiki
 title   : 기본적인 복구의 종류와 동작
 summary : 
