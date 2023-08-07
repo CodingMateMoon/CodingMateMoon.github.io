@@ -1,4 +1,4 @@
-[[---]]
+---
 layout  : wiki
 title   : Oracle 멀티테넌트 아키텍처(Multi-Tenant Architecture. MTA)
 summary : 
