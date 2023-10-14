@@ -1,9 +1,9 @@
 ---
 layout  : wiki
-title   : vimrc set
+title   : vimrc set, keymap
 summary : vimrc set
 date    : 2023-03-01 21:21:30 +0900
-updated : 2023-04-23 02:26:46 +0900
+updated : 2023-10-14 10:12:48 +0900
 tag     : vimrc set
 toc     : true
 public  : true
@@ -12,6 +12,21 @@ latex   : false
 ---
 * TOC
 {:toc}
+
+# keymap
+```viml
+
+## 커서 이동
+
+| key | 설명                 | 응용                     |
+|-----|----------------------|--------------------------|
+| h   | 왼쪽으로 커서 이동   | 10h : 왼쪽으로 10칸 이동 |
+| j   | 아래로 커서 이동     | 10j : 아래로 10줄 이동   |
+| k   | 위로 커서 이동       |                          |
+| l   | 오른쪽으로 커서 이동 |                          |
+
+
+```
 
 # VIM 설정
 ```viml
@@ -254,7 +269,7 @@ set smarttab
 set ai
 " Smart Indent
 set si
-
+set relativenumber!
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   Key Mapping

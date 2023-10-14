@@ -1,9 +1,9 @@
 {
  "type": "wiki",
- "title": "vimrc set",
+ "title": "vimrc set, keymap",
  "summary": "vimrc set",
  "parent": "vim",
  "url": "/wiki/vim/vimrc_set",
- "updated": "2023-04-23 02:26:46 +0900",
+ "updated": "2023-10-14 10:12:48 +0900",
  "children": []
 }
