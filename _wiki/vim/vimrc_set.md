@@ -3,7 +3,7 @@ layout  : wiki
 title   : vimrc set, keymap
 summary : vimrc set
 date    : 2023-03-01 21:21:30 +0900
-updated : 2023-10-15 08:32:17 +0900
+updated : 2023-10-16 08:52:27 +0900
 tag     : vimrc set
 toc     : true
 public  : true
@@ -33,8 +33,24 @@ latex   : false
 | CTRL + B | 한 화면 뒤로 이동(BACK)        |                             |
 | CTRL + D | 반 화면 앞으로 이동(DOWN)      |                             |
 | CTRL + U | 반 화면 뒤로 이동 (UP)         |                             |
+| CTRL + E | 한 줄씩 위로 이동              |                             |
+| CTRL + Y | 한 줄씩 아래로 이동            |                             |
 | z.       | 현재 행을 중앙으로             |                             |
 | z-       | 현재 행을 하단으로             |                             |
+| ^        | 행의 맨 왼쪽으로 커서 이동     |                             |
+| $        | 행의 맨 오른쪽으로 커서 이동   |                             |
+
+## 삽입
+
+| key | 설명                             | 응용 |
+|-----|----------------------------------|------|
+| a   | 커서 오른쪽에 문자 삽입          |      |
+| A   | 커서 오른쪽, 행의 끝에 문자 삽입 |      |
+| i   | 커서 왼쪽에 문자 삽입            |      |
+| I   | 커서 왼쪽, 행의 처음에 문자 삽입 |      |
+| o   | 커서 아래에 행 삽입              |      |
+| O   | 커서 위에 행 삽입                |      |
+
 
 
 
@@ -307,3 +323,6 @@ map <F3> <ESC>:set nu! relativenumber!<CR>
 " jk => esc, Escape insert mode
 inoremap jk <ESC>
 ```  
+
+# 참고자료
+* vi /vim 편집기 명령어 정리 단축키 모음 목록 : <https://iamfreeman.tistory.com/entry/vi-vim-%ED%8E%B8%EC%A7%91%EA%B8%B0-%EB%AA%85%EB%A0%B9%EC%96%B4-%EC%A0%95%EB%A6%AC-%EB%8B%A8%EC%B6%95%ED%82%A4-%EB%AA%A8%EC%9D%8C-%EB%AA%A9%EB%A1%9D>
