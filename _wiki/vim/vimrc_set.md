@@ -3,7 +3,7 @@ layout  : wiki
 title   : vimrc set, keymap
 summary : vimrc set
 date    : 2023-03-01 21:21:30 +0900
-updated : 2023-10-22 20:16:49 +0900
+updated : 2023-10-26 11:04:55 +0900
 tag     : vimrc set
 toc     : true
 public  : true
@@ -14,32 +14,32 @@ latex   : false
 {:toc}
 
 # keymap
-```viml
 
 ## 커서 이동
 
-| key      | 설명                         | 응용                         |
-|----------|------------------------------|------------------------------|
-| h        | 왼쪽으로 커서 이동           | 10h : 왼쪽으로 10칸 이동     |
-| j        | 아래로 커서 이동             | 10j : 아래로 10줄 이동       |
-| k        | 위로 커서 이동               |                              |
-| l        | 오른쪽으로 커서 이동         |                              |
-| w        | 한 단어 오른쪽으로 커서 이동 | 5w : 5 단어 오른쪽으로 이동  |
-| b        | 한 단어 왼쪽으로 커서 이동   |                              |
-| H        | 화면 맨 위로 이동            |                              |
-| M        | 화면 중간으로 이동           |                              |
-| L        | 화면 맨 아래로 이동          |                              |
-| CTRL + F | 한 화면 앞으로 이동(FORWARD) |                              |
-| CTRL + B | 한 화면 뒤로 이동(BACK)      |                              |
-| CTRL + D | 반 화면 앞으로 이동(DOWN)    |                              |
-| CTRL + U | 반 화면 뒤로 이동 (UP)       |                              |
-| CTRL + E | 한 줄씩 위로 이동            |                              |
-| CTRL + Y | 한 줄씩 아래로 이동          |                              |
-| z.       | 현재 행을 중앙으로           |                              |
-| z-       | 현재 행을 하단으로           |                              |
-| ^        | 행의 맨 왼쪽으로 커서 이동   |                              |
-| $        | 행의 맨 오른쪽으로 커서 이동 |                              |
-| >        | 들여쓰기                     | vjjj> (indent several lines) |
+| key       | 설명                         | 응용                         |
+|-----------|------------------------------|------------------------------|
+| h         | 왼쪽으로 커서 이동           | 10h : 왼쪽으로 10칸 이동     |
+| j         | 아래로 커서 이동             | 10j : 아래로 10줄 이동       |
+| k         | 위로 커서 이동               |                              |
+| l         | 오른쪽으로 커서 이동         |                              |
+| w         | 한 단어 오른쪽으로 커서 이동 | 5w : 5 단어 오른쪽으로 이동  |
+| b         | 한 단어 왼쪽으로 커서 이동   |                              |
+| H         | 화면 맨 위로 이동            |                              |
+| M         | 화면 중간으로 이동           |                              |
+| L         | 화면 맨 아래로 이동          |                              |
+| CTRL + F  | 한 화면 앞으로 이동(FORWARD) |                              |
+| CTRL + B  | 한 화면 뒤로 이동(BACK)      |                              |
+| CTRL + D  | 반 화면 앞으로 이동(DOWN)    |                              |
+| CTRL + U  | 반 화면 뒤로 이동 (UP)       |                              |
+| CTRL + E  | 한 줄씩 위로 이동            |                              |
+| CTRL + Y  | 한 줄씩 아래로 이동          |                              |
+| z + ENTER | 현재 행을 상단으로           |                              |
+| z.        | 현재 행을 중앙으로           |                              |
+| z-        | 현재 행을 하단으로           |                              |
+| ^         | 행의 맨 왼쪽으로 커서 이동   |                              |
+| $         | 행의 맨 오른쪽으로 커서 이동 |                              |
+| >         | 들여쓰기                     | vjjj> (indent several lines) |
 
 ## 삽입
 
@@ -52,11 +52,6 @@ latex   : false
 | o   | 커서 아래에 행 삽입              |      |
 | O   | 커서 위에 행 삽입                |      |
 
-
-
-
-
-```
 
 # VIM 설정
 ```viml
@@ -319,7 +314,8 @@ map <leader>q <ESC><ESC>:q<CR>
 map <F2> <ESC><ESC>:w<CR>
 
 " F3 => Toggle line number
-map <F3> <ESC>:set nu! relativenumber!<CR>
+" map <F3> <ESC>:set nu! relativenumber!<CR>
+map <F3> <ESC>:set nu! rnu!<CR>
 
 " jk => esc, Escape insert mode
 inoremap jk <ESC>
