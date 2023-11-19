@@ -20,7 +20,7 @@ latex: true
 
 ## Motto
 > If you think it's truly valuable, try to keep that value, deliberately practice, be sincere in everything, just do it steadily.
-> Import thing is not to give up but to stand up and reflect.
+> Important thing is not to give up but to stand up and reflect.
 > Enjoy the journey, protect and strengthen the system.  
 > 정말 가치있다고 생각한다면 그 가치를 지키기 위해 노력하고 의도적 수련을 하며 매사에 진심으로 임하고 그냥 꾸준히 실천하자.
 > 중요한 것은 포기하지 않고 굳건히 일어서서 성찰하고 나아가는 것이다.
@@ -43,12 +43,16 @@ latex: true
 
 ## Job Experience
 
-- (주)실크로드소프트- _2022-08-08 ~ 현재_
+- (주)실크로드소프트- _2022-09-15 ~ 현재_
+    - 데이터 복제(CDC) 소프트웨어 개발 및 유지보수
+        - 개발
+
+- (주)실크로드소프트- _2022-08-08 ~ 2023-09-15_
     - 데이터 복제/ 정합성 검증 및 복구/GUI 관리 및 모니터링 소프트웨어 관련 QA, 테스트 툴 개발 및 유지보수
-        - QA 엔지니어
+        - QA 
 
 - (주)에스지유 - _2019-05-01 ~ 2022-08-01_
     - 더네이쳐홀딩스, 동인, 배럴, 평택프리미엄아울렛, SG세계물산 등 패션 기업에서 사용하는 ERP 개발 및 유지보수
-    - 전자정부 프레임워크, Mybatis, Oracle, MiPlatform 등을 활용하여 개발.
-        - Java 백엔드 개발자
+    - Java, 전자정부 프레임워크, Mybatis, Oracle, MiPlatform 등을 활용하여 개발.
+        - 개발
 
